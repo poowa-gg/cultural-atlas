@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CulturAtlas - Echoes of Vanishing Worlds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="landing">
+    <h1>CulturAtlas</h1>
+    <p>Echoes of Vanishing Worlds - Click anywhere on the map to share a cultural note.</p>
+    <button onclick="startApp()">Start Exploring</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <header>
+    <h2>Explore Cultural Memories Across the Globe</h2>
+  </header>
+
+  <div id="map-area"></div>
+
+  <form id="form-container">
+    <textarea id="cultural-note" placeholder="Write a cultural memory..."></textarea>
+    <input type="file" id="audio-upload" accept="audio/*" />
+    <button type="submit">Save Memory</button>
+  </form>
+
+  <div id="entries-list">
+    <h3>Recorded Cultural Notes</h3>
+    <ul id="entry-items"></ul>
+  </div>
+
+  <!-- Safe Google Maps SDK Integration -->
+  <script>
+    function initCulturAtlasMap() {
+      console.log("Google Maps SDK initialized successfully.");
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY&callback=initCulturAtlasMap"
+    async
+    defer
+  ></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
